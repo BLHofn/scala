@@ -1,0 +1,7 @@
+hello word hello word
+hello scala hello scala
+hello spark hello spark
+spark hadoop spark hadoop
+hello hadoop hello hadoop
+flume flume flume flume
+hello kafka hello kafka
