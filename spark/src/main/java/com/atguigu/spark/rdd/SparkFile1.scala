@@ -7,6 +7,10 @@ object SparkFile1 {
 //        读取一个文件  计算它是如何分区的
         val conf=new SparkConf().setMaster("local").setAppName("File")
         val sc=new SparkContext(conf)
+      // TODO 创建RDD - 文件（磁盘）
+      // textFile第一个参数表示文件路径
+      // textFile第二个参数表示最小分区数, 具体的分区数量是在执行中动态判断生成的。
+      //         参数可以i不传递，使用默认值 ： math.min(defaultParallelism, 2)
         sc.textFile("mydata/data2.txt",5).saveAsTextFile("output")
         /*
         hello10  0..67
