@@ -17,6 +17,7 @@ object CreateSparkRdd1 {
         //                      scheduler.conf.getInt("spark.default.parallelism", totalCores)
         //         2. 集群模式 : conf.getInt("spark.default.parallelism", math.max(totalCoreCount.get(), 2))
         val rdd2 = sc.makeRDD(list)
+        rdd2.distinct()
 
 
         rdd2.saveAsTextFile("output")
